@@ -9,9 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Provider<String>(
-      create: (context){
-        return data;
-      },
+      create: (context)=>data,
       child: MaterialApp(
           home: Scaffold(
             appBar: AppBar(
