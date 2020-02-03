@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
             appBar: AppBar(
                 title: Text(data),
             ),
-            body: Level1(data),
+            body: Level1(),
           )
       ),
     );
@@ -23,21 +23,17 @@ class MyApp extends StatelessWidget {
 }
 
 class Level1 extends StatelessWidget {
-  final String data;
-  Level1(this.data);
-
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: Level2(data),
+        child: Level2(),
     );
   }
 }
 
 class Level2 extends StatelessWidget {
-  final String data;
-  Level2(this.data);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -53,7 +49,7 @@ class Level2 extends StatelessWidget {
 class Level3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Text(data);
+    return Text(Provider.of<String>(context));
   }
 }
 
