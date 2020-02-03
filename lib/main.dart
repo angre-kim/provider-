@@ -8,13 +8,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-          appBar: AppBar(
-              title: Text(data),
-          ),
-          body: Level1(data),
-        )
+    return Provider<String>(
+      create: (context){
+        return data;
+      },
+      child: MaterialApp(
+          home: Scaffold(
+            appBar: AppBar(
+                title: Text(data),
+            ),
+            body: Level1(data),
+          )
+      ),
     );
   }
 }
@@ -50,7 +55,7 @@ class Level2 extends StatelessWidget {
 class Level3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Text('Need data');
+    return Text(data);
   }
 }
 
