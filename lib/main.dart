@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  final String data = 'top screet';
+  final String data = 'top screet ㅈㄷㅈㄱㅈㄷ';
 
   @override
   Widget build(BuildContext context) {
