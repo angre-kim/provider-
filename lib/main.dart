@@ -63,11 +63,20 @@ class MyText extends StatelessWidget {
 class MyTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return TextField();
+    return TextField(
+      onChanged: (newText){
+        Provider.of<Data>(context).changeString(newText);
+      },
+    );
   }
 }
 
 class Data extends ChangeNotifier{
   String data = 'some data';
+
+  void changeString(String newString){
+    data = newString;
+    notifyListeners();
+  }
 
 }
